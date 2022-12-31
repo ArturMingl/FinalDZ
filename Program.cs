@@ -1,11 +1,4 @@
-﻿void PrintArray(string[] mass)
-{
-    foreach (string el in mass)
-        Console.Write($"{el} ");
-    Console.WriteLine();
-}
-
-//Определяет колличество элеиентов, удовлетворяющих условию
+﻿//Определяет колличество элеиентов, удовлетворяющих условию
 //Нужна для определения размера нового массива
 int LessThanThree(string[] input)
 {
@@ -43,10 +36,16 @@ Console.WriteLine("Введите массив строк через пробе�
 string stroka = Console.ReadLine();
 M = stroka.Split(' ');
 
-PrintArray(M);
 LessThanThree(M);
-string [] Result = ResultMass(M);
-PrintArray(Result);
+int count = LessThanThree(M);
+if (count == 0)
+{
+    Console.WriteLine("Строк с тремя и менее символами нет");
+}
+else
+{
+string[] Result = ResultMass(M);
 
-
+Console.WriteLine($"[{string.Join(", ", M)}] -> [{string.Join(", ", Result)}]");
+}
 
