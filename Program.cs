@@ -22,14 +22,31 @@ int LessThanThree(string[] input)
     return count;
 }
 
+string[] ResultMass(string[] input)
+{
+    string[] output = new string[LessThanThree(input)];
+
+    for (int i = 0, j = 0; i < input.Length; i++)
+    {
+        if (input[i].Length <= 3)
+        {
+            output[j] = input[i];
+            j++;
+        }
+    }
+
+    return output;
+}
+
 string[] M;
 Console.WriteLine("Введите массив строк через пробел");
 string stroka = Console.ReadLine();
 M = stroka.Split(' ');
 
 PrintArray(M);
-int count = LessThanThree(M);
-Console.WriteLine($"{count}");
+LessThanThree(M);
+string [] Result = ResultMass(M);
+PrintArray(Result);
 
 
 
