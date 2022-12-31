@@ -31,21 +31,21 @@ string[] ResultMass(string[] input)
     return output;
 }
 
-string[] M;
+string[] Input;
 Console.WriteLine("Введите массив строк через пробел");
 string stroka = Console.ReadLine();
-M = stroka.Split(' ');
+Input = stroka.Split(' ');
 
-LessThanThree(M);
-int count = LessThanThree(M);
+LessThanThree(Input);
+int count = LessThanThree(Input);
 if (count == 0)
 {
     Console.WriteLine("Строк с тремя и менее символами нет");
 }
 else
 {
-string[] Result = ResultMass(M);
+string[] Result = ResultMass(Input);
 
-Console.WriteLine($"[{string.Join(", ", M)}] -> [{string.Join(", ", Result)}]");
+Console.WriteLine($"[{string.Join(", ", Input)}] -> [{string.Join(", ", Result)}]");
 }
 
