@@ -44,8 +44,8 @@ if (count == 0)
 }
 else
 {
-string[] Result = ResultMass(Input);
+    string[] Result = ResultMass(Input);
 
-Console.WriteLine($"[{string.Join(", ", Input)}] -> [{string.Join(", ", Result)}]");
+    Console.WriteLine($"[{string.Join(", ", Input)}] -> [{string.Join(", ", Result)}]");
 }
 
